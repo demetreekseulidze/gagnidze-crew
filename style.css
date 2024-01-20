@@ -1,0 +1,325 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "inter", sans-serif;
+  text-decoration: none;
+  list-style: none;
+  scroll-behavior: smooth;
+}
+:root {
+  --text-color: #ffffff;
+  --bg-color: rgb(3, 3, 3);
+  --second-bg-color: rgb(34, 40, 47);
+  --main-color: rgb(74, 176, 36);
+  --other-color: rgb(195, 202, 213);
+
+  --h1-font: 3.4rem;
+  --h2-font: 2.9rem;
+  --p-font: 1rem;
+}
+
+body {
+  color: var(--main-color);
+  background-color: black;
+  
+}
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 16%;
+  background: transparent;
+  transition: all 0.5s ease;
+}
+
+/* logo */
+.logo {
+  font-size: 36px;
+  color: var(--text-color);
+  font-weight: 600;
+}
+
+span {
+  color: var(--main-color);
+}
+
+.navi {
+  display: flex;
+}
+.navi a {
+  font-size: var(--p-font);
+  font-weight: 500;
+  color: var(--other-color);
+  margin-left: 60px;
+  transition: all 0.5s ease;
+}
+
+.navi a:hover {
+  color: var(--main-color);
+  text-shadow: 3px 3px 20px var(--main-color), -2px 1px 30px var(--text-color); /*vaweseb tu ra moxdeba xels ro mivitan mauss ufrosworad*/
+}
+
+
+#menu-icon {
+  font-size: 35px;
+  z-index: 10000;
+  cursor: pointer;
+  display: none;
+}
+
+.h-btn {
+  display: inline-block;
+  padding: 11px 26px;
+  background: transparent;
+  color: var(--main-color);
+  border: 2px solid var(--main-color);
+  border-radius: 13px;
+  transition: all 0.5s ease-in-out;
+}
+
+.h-btn:hover {
+  transition: 1.2s;
+  background: var(--main-color);
+  color: var(--p-font);
+  box-shadow: 0 0 20px var(--main-color);
+  transform: scale(1.05);
+}
+
+/*section */
+section {
+  padding: 110px 16% 90px;
+}
+
+.img {
+  height: 100vh;
+  width: 100%;
+  background: url(back.jpg);
+  background-size: cover;
+  background-position: top right;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.main-cont h4 {
+  font-size: 1.6rem;
+}
+
+.main-cont h1 {
+  font-size: var(--h1-font);
+  font-weight: 800;
+  margin: 20px 0px 20px;
+  line-height: 1.2;
+}
+.main-cont p {
+  font-size: var(--p-font);
+  font-weight: 400;
+  width: 620px;
+  max-width: 100%;
+  color: var(--other-color);
+  line-height: 30px;
+  margin-bottom: 15px;
+}
+.social {
+  margin-bottom: 40px;
+}
+.social i {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  color: var(--main-color);
+  border-radius: 50%;
+  font-size: 20px;
+  margin-right: 17px;
+  box-shadow: 0 0 20px transparent;
+  transition: all 0.5s ease;
+}
+
+.social i:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px var(--main-color);
+  background: transparent;
+  border-radius: 50%;
+}
+.btn {
+  display: inline-block;
+  padding: 11px 26px;
+  background: var(--main-color);
+  color: var(--bg-color);
+  border: 2px solid var(--main-color);
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: 600;
+  transition: all 0.5s ease;
+}
+.btn:hover {
+  background: transparent;
+  color: var(--main-color);
+  box-shadow: 0 0 20px var(--main-color);
+}
+
+header {
+  background: black;
+  box-shadow: 0 0.1rem 1rem rgba(255, 0, 0, 0.2);
+  padding: 16px 16%;
+}
+
+/* scroollll baaaaar */
+body::-webkit-scrollbar {
+  width: 0.4rem;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(137, 226, 70);
+  outline: 1px solid rgb(65, 138, 211);
+}
+
+/* imaage of crew */
+#img {
+  display: flex;
+  border-radius: 50%;
+  width: 300px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ჩვენს შესახებ ყველაფერი */
+.about {
+  background: var(--second-bg-color);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 1rem;
+}
+
+
+@keyframes moveUpDown {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px); 
+  }
+}
+
+.about-img img {
+  width: 100%;
+  height: 500px;
+  max-width: 530px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 7px solid var(--main-color);
+  box-shadow: 0 0 30px var(--main-color);
+  animation: moveUpDown 4s infinite; 
+}
+
+.about-txt h2 {
+  font-size: 2rem;
+  line-height: 1.3;
+  margin-bottom: 20px;
+}
+
+/* gios shesaxeb liderebis seqcia */
+
+.lead-txt img{
+  width: 30%;
+  border-radius: 40px;
+  margin-left: 35%;
+  border: 5px solid green;
+  box-shadow: 0 0 20px var(--main-color);
+  transition: all 1s ease;
+}
+.lead-txt img:hover{
+  transform: scale(1.05);
+  transition: 1.2s;
+}
+
+
+.lead-txt h1{
+  padding: 70px;
+  color: red;
+  font-size: 40px;
+  text-align: center;
+  padding: 30px;
+}
+.lead-txt p{
+  font-size: var(--p-font);
+  text-align: center;
+  padding: 20px;
+}
+
+/* mini liderebis seqcia: me, io da dati */
+.mini-lead {
+  display: flex;
+  justify-content: space-between;
+   
+}
+
+.mini-lead .deme,
+.mini-lead .dati,
+.mini-lead .io {
+  flex: 1;
+  text-align: center;
+}
+
+.mini-lead img {
+  max-width: 100%;
+  height: auto; 
+  width: 70%;
+  margin: auto;
+}
+#min{
+  padding: 150px;
+}
+.dati img{
+  width: 80%;
+}
+
+
+
+
+/* crew membererbis seqcia  */
+
+.crew {
+  display: flex;
+  justify-content: space-between;
+}
+
+.crew .andria1,
+.crew .idk,
+.crew .Temo,
+.crew .dias {
+  flex: 1;
+  text-align: center;
+}
+
+.crew img {
+  max-width: 100%;
+  height: auto; 
+  width: 70%;
+  margin: auto;
+}
+
+.crew .andria1 img,
+.crew .idk img,
+.crew .Temo img,
+.crew .dias img{
+  width: 80%;
+}
+
+
+/* crew moderatoris eqcia */
+#mod{
+  padding: 90px;
+}
